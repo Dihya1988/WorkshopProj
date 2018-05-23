@@ -1,0 +1,27 @@
+{% trans_default_domain 'FOSUserBundle' %}
+{% extends '@MyAppEsprit/layoutEmp.html.twig' %}
+
+{% block formulaire %}
+
+    <div class="banner">
+
+
+        <div class="banner-content">
+
+            <h1>Bonjour {#{{ app.user.username }} #} </h1>
+            <h2> Nous sommes heureux de vous revoir! </h2>
+        </div>
+    </div>
+
+
+    <div class="main-content-wrapper">
+    <div class="left-column">
+    <div class="left-col-content">
+
+
+Connecté en tant que
+    </div>
+
+    </div>
+        <div>
+{% endblock %}

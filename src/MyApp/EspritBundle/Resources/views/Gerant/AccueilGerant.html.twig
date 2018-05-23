@@ -1,0 +1,33 @@
+{% extends '@MyAppEsprit/layoutGerant.html.twig' %}
+
+{% block formulaire %}
+
+    <div class="banner">
+
+
+<div class="banner-content">
+
+    <h1>Bonjour {#{{ app.user.username }} #} </h1>
+    <h2> Nous sommes heureux de vous revoir! </h2>
+</div>
+</div>
+
+
+    <div class="main-content-wrapper">
+    <div class="left-column">
+    <div class="left-col-content">
+
+<script src="{{asset('js/jquery.min.js')}}" type="text/javascript"></script>
+
+<script src="{{asset('js/highcharts.js')}}"></script>
+<script src="{{asset('js/exporting.js')}}"></script>
+<script type="text/javascript">
+    {{ chart(chart) }}
+</script>
+    </div>
+
+    </div>
+    <div>
+<div id="linechart" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+my_app_esprit_homepage:
+    path:     /
+    defaults: { _controller: MyAppEspritBundle:Default:index }
+
+my_app_esprit_registerEmp:
+    path:     /registerEmp
+    defaults: { _controller: MyAppEspritBundle:Employe:AjouterEmploye}
+
+my_app_esprit_accemp:
+    path:     /accemp
+    defaults: { _controller: MyAppEspritBundle:Employe:Accueil}
+
+my_app_esprit_mail:
+    path: /mail
+    defaults: { _controller: MyAppEspritBundle:Mail:index }
+
+my_app_mail_accuse:
+    path: /success
+    defaults: { _controller: MyAppEspritBundle:Mail:success }
+
+my_app_esprit_accgerant:
+    path:     /accgerant
+    defaults: { _controller: MyAppEspritBundle:Gerant:chartLine }
+
+my_app_esprit_afficheacc:
+    path:     /accueil
+    defaults: { _controller: MyAppEspritBundle:PageStatique:afficheAcc}
+
+Nom:
+    path:     /nom
+    defaults: { _controller: MyAppEspritBundle:Gerant:affichageGerant }
+
+my_app_esprit_ajouteq:
+    path:     /ajouteq
+    defaults: { _controller: MyAppEspritBundle:Equipe:ajoutEq}
+
+my_app_esprit_listeq:
+    path:     /listeq
+    defaults: { _controller: MyAppEspritBundle:Equipe:listeEq}
+
+my_app_esprit_suppeq:
+    path:     /suppeq
+    defaults: { _controller: MyAppEspritBundle:Equipe:supprimerEq}
+
+my_app_esprit_modifeq:
+    path:     /modifeq
+    defaults: { _controller: MyAppEspritBundle:Equipe:modifEq}
+
+my_app_esprit_listemp:
+    path:     /listemp
+    defaults: { _controller: MyAppEspritBundle:Gerant:listeEmp}
+
+my_app_esprit_modifemp:
+    path:     /modifemp
+    defaults: { _controller: MyAppEspritBundle:Gerant:modifEmp}
+
+my_app_esprit_deletemp:
+    path:     /deletemp
+    defaults: { _controller: MyAppEspritBundle:Gerant:supprimerEmp}
+
+

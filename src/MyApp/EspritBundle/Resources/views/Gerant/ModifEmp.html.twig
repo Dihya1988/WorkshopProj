@@ -1,0 +1,69 @@
+{% extends '@MyAppEsprit/layoutGerant.html.twig' %}
+{% block formulaire %}
+    <div class="banner">
+
+
+        <div class="banner-content">
+
+            <h1>Bonjour </h1>
+            <h2> Nous sommes heureux de vous revoir! </h2>
+        </div>
+    </div>
+
+    <div class="main-content-wrapper">
+    <div class="left-column">
+        <div class="left-col-content">
+
+            <div class="left-col-content-title">
+                <h1>Modification des données de l'employé</h1>
+            </div>
+            {{ form_start(form, {'method': 'post'})}}
+            <table>
+                <tr>
+                    <td>Nom d'utilisateur : </td>
+                    <td>{{ form_widget(form.username) }}</td>
+                </tr>
+
+                <tr>
+                    <td>Equipe : </td>
+                    <td>{{ form_widget(form.idEquipe) }}</td>
+                </tr>
+                <tr>
+                    <td>Adresse e-mail : </td>
+                    <td> {{ form_widget(form.email) }} </td>
+                </tr>
+                <tr>
+                    <td>Téléphone : </td>
+                    <td>{{ form_widget(form.tel) }}</td>
+                </tr>
+                <tr>
+                    <td> Mot de passe : </td>
+                    <td>{{ form_widget(form.plainPassword.first) }}</td>
+
+                </tr>
+                <tr>
+                    <td> Répéter le mot de passe : </td>
+                    <td>{{ form_widget(form.plainPassword.second) }}</td>
+                </tr>
+
+            </table>
+            <div>
+                <input type="submit" value="Valider" />
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+
+    </div>
+    <div>
+
+
+
+    {{ form_end(form) }}
+
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends '@MyAppEsprit/layoutGerant.html.twig' %}
+{% block formulaire %}
+<div class="banner">
+
+
+    <div class="banner-content">
+
+        <h1>Bonjour </h1>
+        <h2> Nous sommes heureux de vous revoir! </h2>
+    </div>
+</div>
+
+<div class="main-content-wrapper">
+    <div class="left-column">
+        <div class="left-col-content">
+            <p>Ici, vous pouvez gérer vos équipes de la façon dont vous voulez </p>
+
+            <div class="left-col-content-title">
+                <h1>Tables des équipes</h1>
+            </div>
+<br>
+            <br>
+            <table border="1">
+                <tr>
+                    <td>Ajouter une équipe : </td>
+                    <td><a href="{{ path('my_app_esprit_ajouteq') }}">Ajouter une équipe</a></td>
+
+                </tr>
+                <tr>
+                <td>ID</td>
+                <td> Equipe </td>
+                <td> Modifier</td>
+                <td>Supprimer</td>
+
+                </tr>
+
+                {% for e in equipes %}
+                    <tr>
+                        <td>{{ e.idEq}}</td>
+                        <td> {{ e.nomEq }} </td>
+                        <td> <a href="{{ path('my_app_esprit_modifeq',{'idEq':e.idEq}) }}">Modifier</a>  </td>
+                        <td> <a href="{{ path('my_app_esprit_suppeq', {'idEq':e.idEq}) }}">Supprimer</a>  </td>
+
+
+                    </tr>
+
+                {% endfor %}
+
+            </table>
+
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

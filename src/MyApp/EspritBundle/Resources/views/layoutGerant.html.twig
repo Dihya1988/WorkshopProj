@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Social Pro</title>
+    <link href="{{ asset("css/styles.css") }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset( 'http://fonts.googleapis.com/css?family=Ubuntu+Condensed') }}" rel='stylesheet' type='text/css' />
+</head>
+<body>
+<div class="header-wrapper">
+    <div class="menu">
+        <ul>
+            <li><a href="{{ path('my_app_esprit_accgerant') }}"> Accueil </a></li>
+            <li><a href="{{ path('my_app_esprit_registerEmp') }}"> Inviter des employés </a></li>
+            <li><a href="{{ path('my_app_esprit_listeq')}}"> Gérer les équipes </a></li>
+            <li><a href="{{ path('my_app_esprit_listemp')}}"> Gérér les employés </a></li>
+
+
+        </ul>
+    </div>
+    <div class="clearing"></div>
+    <div class="logo-search-wrapper">
+        <div class="logo-search-container">
+            <div class="logo"> Social Pro </div>
+            <div class="search">
+                <ul>
+                    <li class="search-input">
+                        <input type="text" class="search-input-textfield" />
+                    </li>
+                    <li class="search-button"><a href="#"><img src="{{ asset("images/search-icon.png") }}" alt="themedemic" /></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% block formulaire %}
+
+
+</div>
+
+
+
+
+
+
+
+
+
+            {% endblock %}
+
+
+
+
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    </div>
+    <div class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-content">
+                <h1>GET IN TOUCH</h1>
+                <p>Email : socialproesprit@gmail.com<br/>
+                    Adresse : 18, rue de l'Usine - ZI Aéroport Charguia II 2035 Ariana <br/>
+                </p>
+            </div>
+            <div class="subscribe">
+                <h1>NEWSLETTER SIGNUP</h1>
+                <p>Découvrez les newsletters de Social Pro</p>
+                <div class="subcribe-container">
+                    <ul>
+                        <li>
+                            <input name="" type="text" class="subscribe-input-textfield" />
+                        </li>
+                        <li><a href="#"><img src="{{ asset("images/subscribe-button.png") }}" alt="themedemic" /></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyrights">Copyright (c) Untitled. Design by <a href="{{ asset("http://www.alltemplateneeds.com") }}">www.alltemplateneeds.com</a>, Photos by www.morguefile.com</div>
+</body>
+</html>
+

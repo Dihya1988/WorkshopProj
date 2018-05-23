@@ -1,0 +1,31 @@
+{% extends '@MyAppEsprit/layoutGerant.html.twig' %}
+{% block formulaire %}
+<div class="banner">
+
+
+    <div class="banner-content">
+
+        <h1>Bonjour </h1>
+        <h2> Nous sommes heureux de vous revoir! </h2>
+    </div>
+</div>
+
+<div class="main-content-wrapper">
+    <div class="left-column">
+        <div class="left-col-content">
+            <p>Ici, vous pouvez ajouter des équipes</p>
+
+            <div class="left-col-content-title">
+                <h1>Ajouter une équipe</h1>
+            </div>
+
+            {{ form_start(form) }}
+
+            {{ form_end(form) }}
+</div>
+    </div>
+    </div>
+
+
+
+{% endblock %}

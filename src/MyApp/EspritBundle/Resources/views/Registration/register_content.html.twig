@@ -1,0 +1,78 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+
+<div>
+    <span>{{ form_errors(form.username) }}</span>
+    <span>{{ form_errors(form.email) }}</span>
+    <span>{{ form_errors(form.RaisonSociale) }}</span>
+    <span>{{ form_errors(form.tel) }}</span>
+    <span>{{ form_errors(form.tva) }}</span>
+    <span>{{ form_errors(form.fax) }}</span>
+    <span>{{ form_errors(form.site) }}</span>
+    <span>{{ form_errors(form.roles) }}</span>
+    <span>{{ form_errors(form.ville) }}</span>
+    <span>{{ form_errors(form.id_equipe) }}</span>
+</div>
+<div class="contact-form margin-top">
+    {{ form_errors(form) }}
+
+    <label> <span>{{ form_label(form.username) }}</span>
+        {{ form_widget(form.username, {'attr': {'class': 'input_text'}}) }}
+
+    </label>
+
+    <label> <span>{{ form_label(form.email) }}</span>
+        {{ form_widget(form.email, {'attr': {'class': 'input_text'}}) }}
+    </label>
+
+    <label> <span>{{ form_label(form.RaisonSociale) }}</span>
+        {{ form_widget(form.RaisonSociale, {'attr': {'class': 'input_text'}}) }}
+    </label>
+
+    <label> <span>{{ form_label(form.tel) }}</span>
+        {{ form_widget(form.tel, {'attr': {'class': 'input_text'}}) }}
+    </label>
+
+    <label> <span>{{ form_label(form.tva) }}</span>
+        {{ form_widget(form.tva, {'attr': {'class': 'input_text'}}) }}
+    </label>
+
+    <label> <span>{{ form_label(form.fax) }}</span>
+        {{ form_widget(form.fax, {'attr': {'class': 'input_text'}}) }}
+    </label>
+
+    <label> <span>{{ form_label(form.plainPassword.first) }}</span>
+        {{ form_widget(form.plainPassword.first, {'attr': {'class': 'input_text'}}) }}
+    </label>
+
+
+    <label> <span>{{ form_label(form.plainPassword.second) }}</span>
+        {{ form_widget(form.plainPassword.second, {'attr': {'class': 'input_text'}}) }}
+    </label>
+
+    <label>
+        <span>{{ form_label(form.ville) }}</span>
+        {{ form_widget(form.ville, {'attr': {'class': 'input_text'}}) }}
+    </label>
+
+    <label> <span>{{ form_label(form.site) }}</span>
+        {{ form_widget(form.site, {'attr': {'class': 'input_text'}}) }}
+    </label>
+
+    <label> <span>{{ form_label(form.roles) }}</span>
+        {{ form_widget(form.roles, {'attr': {'class': 'input_text'}}) }}
+    </label>
+
+    <label> <span>{{ form_label(form.id_equipe) }}</span>
+        {{ form_widget(form.id_equipe, {'attr': {'class': 'input_text'}}) }}
+    </label>
+
+
+
+    <input type="submit" class="button" value="{{ 'registration.submit'|trans }}" />
+
+
+
+</div>
+{{ form_end(form) }}

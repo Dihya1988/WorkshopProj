@@ -1,0 +1,74 @@
+{% extends '@FOSUser/layoutGerant.html.twig' %}
+{% trans_default_domain 'FOSUserBundle' %}
+{% block formulaire %}
+    <div class="banner">
+
+
+        <div class="banner-content">
+
+            <h1>Bonjour </h1>
+            <h2> Nous sommes heureux de vous revoir! </h2>
+        </div>
+    </div>
+
+    <div class="main-content-wrapper">
+    <div class="left-column">
+    <div class="left-col-content">
+<p>Ici, vous pouvez inviter les membres de votre société, ils receveront des messages pour pouvoir se connecter sur l'interface </p>
+
+<div class="left-col-content-title">
+    <h1>Formulaire d'invitation</h1>
+</div>
+    {{ form_start(form, {'method': 'post', 'attr': {'class': 'fos_user_registration_register'}}) }}
+
+    <div>
+        <span>{{ form_errors(form.username) }}</span>
+        <span>{{ form_errors(form.email) }}</span>
+        <span>{{ form_errors(form.tel) }}</span>
+        <span>{{ form_errors(form.roles) }}</span>
+        <span>{{ form_errors(form.id_equipe) }}</span>
+    </div>
+    <div class="contact-form margin-top">
+        {{ form_errors(form) }}
+
+        <label> <span>{{ form_label(form.username) }}</span>
+            {{ form_widget(form.username, {'attr': {'class': 'input_text'}}) }}
+
+        </label>
+
+        <label> <span>{{ form_label(form.email) }}</span>
+            {{ form_widget(form.email, {'attr': {'class': 'input_text'}}) }}
+        </label>
+
+        <label> <span>{{ form_label(form.tel) }}</span>
+            {{ form_widget(form.tel, {'attr': {'class': 'input_text'}}) }}
+        </label>
+
+        <label> <span>{{ form_label(form.plainPassword.first) }}</span>
+            {{ form_widget(form.plainPassword.first, {'attr': {'class': 'input_text'}}) }}
+        </label>
+
+        <label> <span>{{ form_label(form.plainPassword.second) }}</span>
+            {{ form_widget(form.plainPassword.second, {'attr': {'class': 'input_text'}}) }}
+        </label>
+
+        <label> <span>{{ form_label(form.roles) }}</span>
+            {{ form_widget(form.roles, {'attr': {'class': 'input_text'}}) }}
+        </label>
+
+        <label> <span>{{ form_label(form.id_equipe) }}</span>
+            {{ form_widget(form.id_equipe, {'attr': {'class': 'input_text'}}) }}
+        </label>
+
+
+
+        <input type="submit" class="button" value="{{ 'registration.submit'|trans }}" />
+
+
+
+    </div>
+
+    {{ form_end(form) }}
+
+
+{% endblock %}

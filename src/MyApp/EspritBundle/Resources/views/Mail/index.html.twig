@@ -1,0 +1,68 @@
+{% extends '@MyAppEsprit/layoutGerant.html.twig' %}
+{% block formulaire %}
+<div class="banner">
+
+
+    <div class="banner-content">
+
+        <h1>Bonjour </h1>
+        <h2> Nous sommes heureux de vous revoir! </h2>
+    </div>
+</div>
+
+<div class="main-content-wrapper">
+    <div class="left-column">
+        <div class="left-col-content">
+
+
+
+<body>
+
+<h2> <strong> Envoi de demande aux employés</strong> </h2>
+
+<hr>
+
+<h3><p> Les données que vous allez ajouter vont fournir le texte de l'email. Merci de les remplir soigneusement </p></h3>
+
+{{ form_start (form) }}
+
+<table>
+
+    <tr>
+
+        <td> Nom de l'invité</td>
+
+        <td> {{ form_widget (form.nom) }} </td>
+
+    </tr>
+
+    <tr>
+
+        <td> Prénom de l'invité </td>
+
+        <td> {{ form_widget (form.prenom) }} </td>
+
+    </tr>
+
+    <tr>
+
+        <td> Mot de passe de l'invité </td>
+
+        <td> {{ form_widget (form.pwd) }} </td>
+
+    </tr>
+
+        <tr>
+
+        <td> Email </td>
+
+        <td> {{ form_widget (form.email) }} </td>
+
+    </tr>
+
+</table>
+</body>
+{{ form_end (form)}}
+
+
+{% endblock %}
